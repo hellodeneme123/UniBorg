@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 async def _(event):
 	if event.fwd_from:
 		return
-	deq = deque(list("💙💛💓💔💘💕💜💚💝💞💟"))
+	deq = deque(list("�💜🤍💜🤍💜🤍"))
 	for _ in range(100):
 		await asyncio.sleep(0.1)
 		await event.edit("".join(deq))
