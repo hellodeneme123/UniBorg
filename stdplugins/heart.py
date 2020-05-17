@@ -54,7 +54,7 @@ async def _(event):
         deq.rotate(1)
         
         
-@borg.on(events.NewMessage(pattern=r"\.güno", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.gm", outgoing=True))
 async def _(event):
     deq = deque(list("🌞🌱🌤🌈"))
     for _ in range(70):
