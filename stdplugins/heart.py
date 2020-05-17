@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 async def _(event):
     if event.fwd_from:
         return
-    deq = deque(list("💙💛💓💔💘💕💜💚💝💞💟"))
+    deq = deque(list("💙💛💓💘💕💜💚💝💞💟"))
     for _ in range(100):
         await asyncio.sleep(0.2)
         await event.edit("".join(deq))
@@ -54,7 +54,7 @@ async def _(event):
         deq.rotate(1)
         
         
-@borg.on(events.NewMessage(pattern=r"\.iyigeceler", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.güno", outgoing=True))
 async def _(event):
     deq = deque(list("🌞🌱🌤🌈"))
     for _ in range(70):
