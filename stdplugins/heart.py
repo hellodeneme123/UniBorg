@@ -45,7 +45,7 @@ async def _(event):
         deq.rotate(1)
 
         
- @borg.on(events.NewMessage(pattern=r"\.iyigeceler", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.iyigeceler", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
