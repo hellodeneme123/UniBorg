@@ -32,3 +32,14 @@ async def bkallp(event):
     for t in a:
         await d.edit(t)
         await asyncio.sleep(5)
+        
+        
+@borg.on(events.NewMessage(pattern=r"\.galp", outgoing=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    deq = deque(list("💜🤍💜🤍💜💜🤍💜🤍💜💜🤍💜🤍💜💜🤍💜🤍💜💜🤍💜🤍💜"))
+    for _ in range(100):
+        await asyncio.sleep(0.1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
